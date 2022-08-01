@@ -10,6 +10,8 @@ function generatePassword() {
 // Step 1. Prompt the user for password criteria
     // a. password length 8 < 128
     // b. lowercase, uppercase, special characters
+    const numbers = [1,2,3,4,5,6,7,8,9,0];
+    const symbols = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
 // Step 2. Validate the input
 
