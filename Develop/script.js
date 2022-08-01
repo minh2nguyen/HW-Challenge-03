@@ -1,17 +1,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+// Step 1. Prompt the user for password criteria
+    // a. password length 8 < 128
+    // b. lowercase, uppercase, special characters
+var numbers = [1,2,3,4,5,6,7,8,9,0];
+var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "=", "+"]
 
 // At the start, generatePassword was not defined, so I defined it here: 
 function generatePassword() {
   // This is a confirmation to ensure me that things are connected and working 
   console.log("You clicked the button! 😀")
-//The start of my psuedo code to keep me organized 
 
-// Step 1. Prompt the user for password criteria
-    // a. password length 8 < 128
-    // b. lowercase, uppercase, special characters
-    const numbers = [1,2,3,4,5,6,7,8,9,0];
-    const symbols = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
 // Step 2. Validate the input
 
