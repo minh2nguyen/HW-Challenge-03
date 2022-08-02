@@ -7,15 +7,17 @@ function generatePassword() {
   console.log("You clicked the button! 😀")
 
 // Step 1. Prompt the user for password criteria
-    // a. lowercase, uppercase, special characters
+    // - lowercase, uppercase, special characters
     var numbers = [1,2,3,4,5,6,7,8,9,0];
     var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "=", "+"];
     var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-    // b. password length 8 < 128
 
 // Step 2. Validate the input
+  // - password length 8 < 128
+characterLength = prompt("How many characters do you want your password to have? Choose between 8 - 128 characters.");
+if (characterLength <8 || characterLength >128) 
 
 // Step 3. Generate the password based on criteria 
 
