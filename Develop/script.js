@@ -17,7 +17,16 @@ function generatePassword() {
 // Step 2. Validate the input
   // - password length 8 < 128
 characterLength = prompt("How many characters do you want your password to have? Choose between 8 - 128 characters.");
-if (characterLength <8 || characterLength >128) 
+ if (characterLength <8 || characterLength >128) {
+  if (characterLength < 8) {
+    alert ("You passwords needs to be AT LEAST 8 characters")
+    return;
+  }
+  else if (characterLength > 128) {
+    alert("You password needs to be LESS THAN 128 characters")
+    return;
+  }
+
 
 // Step 3. Generate the password based on criteria 
 
