@@ -26,8 +26,20 @@ characterLength = prompt("How many characters do you want your password to have?
     alert("You password needs to be LESS THAN 128 characters")
     return;
   }
+// Prompt for lowercase character 
+includeLowercase = confirm("Do you want to incude lowercase letters in your password?")
 
 
+//prompt for uppercase character
+includeUppercase = confirm("Do you want to include uppercase letters in password?")
+
+// Prompt for numeric character
+includeNumbers = confirm("Do you want to include numbers in your password?")
+
+// Prompy for special characters
+includeSymbols = confirm("Do you want to include special characters in your password?")
+
+// Prompy for 
 // Step 3. Generate the password based on criteria 
 
 // Step 4. Display the generated password on the page
