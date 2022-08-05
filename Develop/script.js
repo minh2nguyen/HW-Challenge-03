@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+// Prompt user to begin
+window.onload = alert("Welcome! Click 'GENERATE PASSWORD' to start!")
 // At the start, generatePassword was not defined, so I defined it here: 
 function generatePassword() {
   // This is a confirmation to ensure me that things are connected and working 
@@ -43,22 +44,19 @@ function generatePassword() {
   if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols) {
     alert ("Please select AT LEAST ONE character type!")
     return;
-  }
+  };
 
-  
-  // If user does not use a character type, their password cannot be generated
-  // if (includeLowercase != includeUppercase != includeNumbers != includeSymbols); {
-  //   alert("Please select AT LEAST ONE character type!")
-  //   return;
-  // };
 
-if (includeLowercase && includeUppercase && includeNumbers && includeSymbols)
+if (includeLowercase){
+
+}
+ && includeUppercase && includeNumbers && includeSymbols)
 
     // Step 3. Generate the password based on criteria 
-    function generatePassword() {
-      var options = generatePasswordOptions;
 
-      var passwordPool = [];
+
+let createdPassword = ""
+
 
       if (options.includeLowercase) {
         for (i = 0; i < lowercase.length; ++i) {
