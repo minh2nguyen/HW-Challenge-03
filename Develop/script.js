@@ -76,8 +76,8 @@ function generatePassword() {
 
   // Step 3. Generate the password based on criteria 
   for (let i = 0; i < characterLength; i++) {
-    let randomPassword = [Math.floor(Math.random() * characters.length)];
-    finalPassword += finalPassword + characters[randomPassword];
+    var randomPassword = [Math.floor(Math.random() * characters.length)];
+    finalPassword += characters[randomPassword];
   }
 
 
