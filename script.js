@@ -19,6 +19,8 @@ function generatePassword() {
 
   var characters = [];
 
+  var finalPassword = "";
+
   // - password length 8 < 128
   var characterLength = prompt("How many characters do you want your password to have? Choose between 8 - 128 characters.");
   if (characterLength < 8 || characterLength > 128) {
@@ -34,22 +36,22 @@ function generatePassword() {
   else {
     // Prompt for lowercase character 
     includeLowercase = confirm("Do you want to incude lowercase letters in your password?")
-      Array.prototype.push.apply(characters,lowercase);
+    Array.prototype.push.apply(characters, lowercase);
     console.log(lowercase)
 
     //prompt for uppercase character
     includeUppercase = confirm("Do you want to include uppercase letters in password?")
-    Array.prototype.push.apply(characters,uppercase);
+    Array.prototype.push.apply(characters, uppercase);
     console.log(uppercase)
 
     // Prompt for numeric character
     includeNumbers = confirm("Do you want to include numbers in your password?")
-    Array.prototype.push.apply(characters,numbers);
+    Array.prototype.push.apply(characters, numbers);
     console.log(numbers)
 
     // Prompt for special characters
     includeSymbols = confirm("Do you want to include special characters in your password?")
-    Array.prototype.push.apply(characters,symbols);
+    Array.prototype.push.apply(characters, symbols);
     console.log(symbols)
   }
 
@@ -58,11 +60,30 @@ function generatePassword() {
     return;
   };
 
+  // Selected options
+  if (includeLowercase) {
+    characters = characters.concat(lowercase);
+  }
+  if (includeUppercase) {
+    characters = characters.concat(uppercase);
+  }
+  if (includeNumbers) {
+    characters = characters.concat(numbers);
+  }
+  if (includeSymbols) {
+    characters = characters.concat(symbols);
+  }
+
   // Step 3. Generate the password based on criteria 
+  for (let i = 0; i < characterLength; i++) {
+    let randomPassword = [Math.floor(Math.random() * characters.length)];
+    finalPassword += finalPassword + characters[randomPassword];
+  }
+
 
   // Step 4. Display the generated password on the page
-  return "Generated Password will appear here"
-}
+  return finalPassword;
+};
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
