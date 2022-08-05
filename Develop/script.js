@@ -1,9 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 // Prompt user to begin
 window.onload = alert("Welcome! Click 'GENERATE PASSWORD' to start!")
+
 // At the start, generatePassword was not defined, so I defined it here: 
 function generatePassword() {
+
   // This is a confirmation to ensure me that things are connected and working 
   console.log("You clicked the button! 😀")
 
@@ -14,8 +17,9 @@ function generatePassword() {
   var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-  // - password length 8 < 128
+  var characters = [];
 
+  // - password length 8 < 128
   var characterLength = prompt("How many characters do you want your password to have? Choose between 8 - 128 characters.");
   if (characterLength < 8 || characterLength > 128) {
     if (characterLength < 8) {
@@ -29,41 +33,32 @@ function generatePassword() {
   }
   else {
     // Prompt for lowercase character 
-    includeLowercase = confirm("Do you want to incude lowercase letters in your password?");
+    includeLowercase = confirm("Do you want to incude lowercase letters in your password?")
+      Array.prototype.push.apply(characters,lowercase);
+    console.log(lowercase)
 
     //prompt for uppercase character
-    includeUppercase = confirm("Do you want to include uppercase letters in password?");
+    includeUppercase = confirm("Do you want to include uppercase letters in password?")
+    Array.prototype.push.apply(characters,uppercase);
+    console.log(uppercase)
 
     // Prompt for numeric character
-    includeNumbers = confirm("Do you want to include numbers in your password?");
+    includeNumbers = confirm("Do you want to include numbers in your password?")
+    Array.prototype.push.apply(characters,numbers);
+    console.log(numbers)
 
     // Prompt for special characters
-    includeSymbols = confirm("Do you want to include special characters in your password?");
+    includeSymbols = confirm("Do you want to include special characters in your password?")
+    Array.prototype.push.apply(characters,symbols);
+    console.log(symbols)
   }
 
   if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols) {
-    alert ("Please select AT LEAST ONE character type!")
+    alert("Please select AT LEAST ONE character type!")
     return;
   };
 
-
-if (includeLowercase){
-
-}
- && includeUppercase && includeNumbers && includeSymbols)
-
-    // Step 3. Generate the password based on criteria 
-
-
-let createdPassword = ""
-
-
-      if (options.includeLowercase) {
-        for (i = 0; i < lowercase.length; ++i) {
-          passwordPool.push(lowercase[i]);
-        }
-      }
-    }
+  // Step 3. Generate the password based on criteria 
 
   // Step 4. Display the generated password on the page
   return "Generated Password will appear here"
